@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh" ng-app="App">
+	<head>
+		<meta charset="utf-8">
+		<title>angular</title>
+		<style>
+			.red{
+				color:red;
+			}
+			.font{
+				font-size:20px;
+			}
+			.background{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-controller="first">
+			<h1>{{ data.message +'b'}}</h1>
+			<input type="button" value="测试" ng-click="abc()">
+			<hr/>
+			<p> 测试ng-if  ng-show  ng-hide</p>
+			<input type="checkbox" ng-model="isflag">
+			<p ng-if="isflag == true">显示ng-if</p>
+			<p ng-show="isflag">显示ng-show</p>
+			<p ng-hide="isflag">显示ng-hide</p>
+			<hr/>
+			<p>测试ng-repeat 以及过滤器</p>
+			<ul>
+				<li ng-repeat="x in list | orderBy:'name'"><span>{{ x.name }}</span><span>{{ $index }}</span></li>
+			</ul>
+		</div>
+		<!-- 数据绑定 -->
+		<hr/>
+		<p>数据绑定</p>
+		<input type="text" ng-model="data.binding">
+		<p> {{data.binding +'test'}} </p>
+		<!-- 数据绑定  根据输入显示样式 -->
+		<hr/>
+		<p>数据绑定  根据输入显示样式</p>
+		<input type="text" ng-model="data.style">
+		<p class="{{ data.style }}">我是数据绑定</p>
+		<!-- ng-repeat -->
+
+		<script type="text/JavaScript" src="../components/angular/angular.js"></script>
+		<script type="text/JavaScript" src="../js/index.js"></script>
+	</body>
+</html>
