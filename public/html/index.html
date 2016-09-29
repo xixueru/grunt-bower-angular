@@ -14,6 +14,7 @@
 				background: blue;
 			}
 		</style>
+		<link type="text/css" rel="stylesheet" href="../css/index.css">
 	</head>
 	<body>
 		<div ng-controller="first">
@@ -30,6 +31,12 @@
 			<ul>
 				<li ng-repeat="x in list | orderBy:'name'"><span>{{ x.name }}</span><span>{{ $index }}</span></li>
 			</ul>
+			<hr/>
+			<p ng-class="{strike: deleted, bold: important, 'has-error': error}"> 测试ng-class  ng-style</p>
+			<input type="checkbox" ng-model="delete" value="">添加删除线
+			<input type="checkbox" ng-model="important" value="加粗">加粗
+			<input type="checkbox" ng-model="error" value="错误">错误
+
 		</div>
 		<!-- 数据绑定 -->
 		<hr/>
