@@ -69,7 +69,7 @@ module.exports = function(grunt) {
     bower: {
         install: {
           options: {
-            targetDir: './public/js/lib',
+            targetDir: './public/components',
             layout: 'byComponent',
             install: true,
             verbose: false,
@@ -88,6 +88,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
