@@ -32,11 +32,25 @@
 				<li ng-repeat="x in list | orderBy:'name'"><span>{{ x.name }}</span><span>{{ $index }}</span></li>
 			</ul>
 			<hr/>
+			<!-- deleted为true增加strike important为true 增加bold类 -->
 			<p ng-class="{strike: deleted, bold: important, 'has-error': error}"> 测试ng-class  ng-style</p>
-			<input type="checkbox" ng-model="delete" value="">添加删除线
+			<input type="checkbox" ng-model="deleted" value="">添加删除线
 			<input type="checkbox" ng-model="important" value="加粗">加粗
 			<input type="checkbox" ng-model="error" value="错误">错误
-
+			<p ng-class="data.style">直接使用字符串作为样式</p>
+			<input type="text" ng-model="data.style">
+			<hr/>
+			<p>动画效果</p>	
+			<input type="button" value="开始动画" ng-click="abcd='animate'">
+			<br>
+			<input type="button" value="恢复原始" ng-click="abcd=''">
+			<br>
+			<span class="base-class" ng-class="abcd">示例文本</span>
+			<hr/>
+			<p>测试ng-options</p>
+			<select ng-model="options" ng-options="(y.name + '喜欢' + y.love ) group by y.sex for y in list">
+				<option value="">选择用户</option>
+			</select>
 		</div>
 		<!-- 数据绑定 -->
 		<hr/>

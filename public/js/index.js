@@ -9,13 +9,19 @@ App.controller("first", function($scope) {
 	$scope.list = [
 		{
 			name : 'john'
+			,love : 'football'
+			,sex : 'man'
 		},
 
 		{
 			name : 'daiv'
+			,love : 'basketball'
+			,sex : 'woman'
 		},
 		{
 			name : 'lily'
+			,love : 'basketball'
+			,sex : 'man'
 		}
 	];
 	$scope.data = {
