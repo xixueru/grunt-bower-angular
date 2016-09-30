@@ -51,6 +51,12 @@
 			<select ng-model="options" ng-options="(y.name + '喜欢' + y.love ) group by y.sex for y in list">
 				<option value="">选择用户</option>
 			</select>
+			<hr/>
+			<p>测试ng-include template</p>
+			<!-- 注意里面的单引号 -->
+			<div ng-include="'template.html'"></div>
+			<div ng-include="data.url"></div>
+			<div ng-include="getUrl()"></div>
 		</div>
 		<!-- 数据绑定 -->
 		<hr/>

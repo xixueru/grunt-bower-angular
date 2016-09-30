@@ -26,10 +26,14 @@ App.controller("first", function($scope) {
 	];
 	$scope.data = {
 		message : 'hello'
+		,url : 'template.html'
 	};
 	$scope.abc = 'abc';
 	$scope.abc = function(){
 		alert($scope.data.message)
+	}
+	$scope.getUrl = function(){
+		return 'template.html'
 	}
 	console.log($scope)
 
