@@ -1,4 +1,12 @@
-var App = angular.module("App", []);
+var App = angular.module("App", ['ngRoute'])
+.config(['$routeProvider',function($routeProvider){
+	$routeProvider
+	.when('/',{template:"这是首页"})
+	.when('/first',{template:"这是第一页"})
+	.when('/second',{templateUrl:'route.html'})
+	.when('/third',{template:"这是第三页"})
+	.otherwise({redirectTo:'/first'})
+}]);
 /*
  * App.controller 声明ng-controller的方法
  * “first” 这个ng-controller的名称

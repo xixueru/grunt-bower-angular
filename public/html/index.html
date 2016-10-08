@@ -57,6 +57,14 @@
 			<div ng-include="'template.html'"></div>
 			<div ng-include="data.url"></div>
 			<div ng-include="getUrl()"></div>
+			<hr/>
+			<p>测试angul-route</p>
+			<ul>
+				<li><a href="#/first">go第一页</a></li>
+				<li><a href="#/second">go第二页</a></li>
+				<li><a href="#/third">go第三页</a></li>
+			</ul>
+			<div ng-view></div>
 		</div>
 		<!-- 新的controller -->
 		<div ng-controller="second">
@@ -74,6 +82,7 @@
 		<!-- ng-repeat -->
 
 		<script type="text/JavaScript" src="../components/angular/angular.js"></script>
+		<script type="text/JavaScript" src="../components/angular-route/angular-route.js"></script>
 		<script type="text/JavaScript" src="../js/index.js"></script>
 	</body>
 </html>
